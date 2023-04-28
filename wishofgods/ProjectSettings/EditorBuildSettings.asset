@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 34d991ff733cdf8459f4f6da38b83fc7
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Stadt_V2.unity
+    guid: e02a3be019665f54885cb56126d1b119
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Home_Innen.unity
+    guid: 913edce547c119f49a60dae87529c8cc
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Taverne_Innen.unity
+    guid: 4a80b750b37aaaa468b4d2087c021162
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Apotheke_Innen.unity
+    guid: e42fa9cc5c4032b419b0fdd3c7a50e41
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: ae3ee9d3c3cb87949889140559bea3dc, type: 2}

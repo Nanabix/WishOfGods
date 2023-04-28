@@ -1,0 +1,370 @@
+fileFormatVersion: 2
+guid: 29afbeb0db745dd4e806fd472700c8da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3002545832528258114
+    second: grass_try 2_0
+  - first:
+      213: 122264240092013917
+    second: grass_try 2_1
+  - first:
+      213: -2403736004757994328
+    second: grass_try 2_2
+  - first:
+      213: 480013758354453507
+    second: grass_try 2_3
+  - first:
+      213: 1968518650552493438
+    second: grass_try 2_4
+  - first:
+      213: 6172451049357963158
+    second: grass_try 2_5
+  - first:
+      213: -2721836130705667229
+    second: grass_try 2_6
+  - first:
+      213: 1794750479641938714
+    second: grass_try 2_7
+  - first:
+      213: -3877077671747009849
+    second: grass_try 2_8
+  - first:
+      213: -5355834561549983728
+    second: grass_try 2_9
+  - first:
+      213: -6657814209918743874
+    second: grass_try 2_10
+  - first:
+      213: -9171287022766166791
+    second: grass_try 2_11
+  - first:
+      213: -3879092925553468890
+    second: grass_try 2_12
+  - first:
+      213: -2585991404494658137
+    second: grass_try 2_13
+  - first:
+      213: -2165353333774547334
+    second: grass_try 2_14
+  - first:
+      213: 2248906230576976159
+    second: grass_try 2_15
+  - first:
+      213: 3659948497176394546
+    second: grass_try 2_16
+  - first:
+      213: -2627946317091163485
+    second: grass_try 2_17
+  - first:
+      213: -8098281475021764801
+    second: grass_try 2_18
+  - first:
+      213: 3470686982572622692
+    second: grass_try 2_19
+  - first:
+      213: 7483824997438433493
+    second: grass_try 2_20
+  - first:
+      213: 8216004423663321257
+    second: grass_try 2_21
+  - first:
+      213: -7712764994186078199
+    second: grass_try 2_22
+  - first:
+      213: 5479113782444525316
+    second: grass_try 2_23
+  - first:
+      213: -4572673022805928381
+    second: grass_try 2_24
+  - first:
+      213: -3251225491589445801
+    second: grass_try 2_25
+  - first:
+      213: -4861493797348094258
+    second: grass_try 2_26
+  - first:
+      213: 7710265848455485884
+    second: grass_try 2_27
+  - first:
+      213: -1078337524570181891
+    second: grass_try 2_28
+  - first:
+      213: -8428314713263776789
+    second: grass_try 2_29
+  - first:
+      213: 7874634787342606124
+    second: grass_try 2_30
+  - first:
+      213: -8491471497803067884
+    second: grass_try 2_31
+  - first:
+      213: -3237673807515115458
+    second: grass_try 2_32
+  - first:
+      213: 7179580467296893831
+    second: grass_try 2_33
+  - first:
+      213: -6755035889183797622
+    second: grass_try 2_34
+  - first:
+      213: -3956008359486426243
+    second: grass_try 2_35
+  - first:
+      213: -3260463149741871734
+    second: grass_try 2_36
+  - first:
+      213: 874441844461866283
+    second: grass_try 2_37
+  - first:
+      213: 3699167371886062883
+    second: grass_try 2_38
+  - first:
+      213: -3157452233048947009
+    second: grass_try 2_39
+  - first:
+      213: -8000125442621871629
+    second: grass_try 2_40
+  - first:
+      213: -6798775392808754767
+    second: grass_try 2_41
+  - first:
+      213: -2224607966482489512
+    second: grass_try 2_42
+  - first:
+      213: 7613401604701063035
+    second: grass_try 2_43
+  - first:
+      213: -1031574202920885290
+    second: grass_try 2_44
+  - first:
+      213: 6527846501515910018
+    second: grass_try 2_45
+  - first:
+      213: 5580547142925031886
+    second: grass_try 2_46
+  - first:
+      213: -4674705973083483987
+    second: grass_try 2_47
+  - first:
+      213: -6430536079050811977
+    second: grass_try 2_48
+  - first:
+      213: 5025103362622419469
+    second: grass_try 2_49
+  - first:
+      213: 5748034745625987187
+    second: grass_try 2_50
+  - first:
+      213: -1203115101988971185
+    second: grass_try 2_51
+  - first:
+      213: -5139806254311276078
+    second: grass_try 2_52
+  - first:
+      213: -2988171663123785049
+    second: grass_try 2_53
+  - first:
+      213: -4447410210898827803
+    second: grass_try 2_54
+  - first:
+      213: 1744737926755974715
+    second: grass_try 2_55
+  - first:
+      213: 7133559382142610280
+    second: grass_try 2_56
+  - first:
+      213: 8245839667466055209
+    second: grass_try 2_57
+  - first:
+      213: -2120544216966200657
+    second: grass_try 2_58
+  - first:
+      213: 3073103068831294477
+    second: grass_try 2_59
+  - first:
+      213: -4530358889941657907
+    second: grass_try 2_60
+  - first:
+      213: 7158276983668181990
+    second: grass_try 2_61
+  - first:
+      213: 5150260747157840609
+    second: grass_try 2_62
+  - first:
+      213: 2293220061083745672
+    second: grass_try 2_63
+  - first:
+      213: 3633620970434110766
+    second: grass_try 2_64
+  - first:
+      213: 8724104788594691131
+    second: grass_try 2_65
+  - first:
+      213: -5859361266909214445
+    second: grass_try 2_66
+  - first:
+      213: 5221287216659600887
+    second: grass_try 2_67
+  - first:
+      213: 1702663357186610266
+    second: grass_try 2_68
+  - first:
+      213: -2981398215339557680
+    second: grass_try 2_69
+  - first:
+      213: 2872713433748214801
+    second: grass_try 2_70
+  - first:
+      213: 5319951478941658135
+    second: grass_try 2_71
+  - first:
+      213: -7037013895712623424
+    second: grass_try 2_72
+  - first:
+      213: 5489137641028997654
+    second: grass_try 2_73
+  - first:
+      213: -1641691268785443084
+    second: grass_try 2_74
+  - first:
+      213: -129474024762498906
+    second: grass_try 2_75
+  - first:
+      213: -4441380191334293134
+    second: grass_try 2_76
+  - first:
+      213: -8314395254923064341
+    second: grass_try 2_77
+  - first:
+      213: 6241142520410943960
+    second: grass_try 2_78
+  - first:
+      213: 7266434097726415650
+    second: grass_try 2_79
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 297, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: grass_try 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1137
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbd2563970d456d0800000000000000
+      internalID: -3002545832528258114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
