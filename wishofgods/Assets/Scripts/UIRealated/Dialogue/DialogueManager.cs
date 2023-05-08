@@ -51,6 +51,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Starting DialogueManager");
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         inputField.gameObject.SetActive(false);

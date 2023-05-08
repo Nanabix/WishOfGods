@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float input;
 
+    [Header("Aniamtion")]
+    public Animator animator;
+    // more animations later: https://www.youtube.com/watch?v=hkaysu1Z-N8&t=663s
     Vector2 moveDirection = Vector2.zero;
     private InputAction move;
     private InputAction jump;
@@ -27,10 +30,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpTime;
     [SerializeField] float jumpMultiplier;
 
-    public LayerMask groundLayer;
-    public Transform feetPosition;
+    [Header("Ground Check")]
+    [SerializeField] public LayerMask groundLayer;
+    [SerializeField] public Transform feetPosition;
     public float groundCheckCircle;
     Vector2 vecGravity;
+    [SerializeField] private Transform raycastOrigin;
+    private RaycastHit2D Hit2d;
 
     bool isJumping;
     float jumpCounter;
@@ -61,9 +67,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GroundCheckMethod();
         moveDirection = move.ReadValue<Vector2>();
-
+        animator.SetFloat("speed",Mathf.Abs(moveDirection.x));
         //flip sprite when Player moves in different direction
+
         if (moveDirection.x < 0)
         {
             spriteRenderer.flipX = false;
@@ -147,6 +155,17 @@ public class PlayerMovement : MonoBehaviour
     {   // is Player on Ground?
         // Create circle -> place cirlce at players feet -> make circle equaö to groundCheckCircle var -> do they overlap?
         return Physics2D.OverlapCircle(feetPosition.position, groundCheckCircle, groundLayer);
+    }
+
+    private void GroundCheckMethod()
+    {
+        Hit2d = Physics2D.Raycast(raycastOrigin.position, -Vector2.up, 100f, groundLayer);
+        if(Hit2d != false)
+        {
+            Vector2 temp = feetPosition.position;
+            temp.y = Hit2d.point.y;
+            feetPosition.position = temp;
+        }
     }
 
     //check one way plattform 
