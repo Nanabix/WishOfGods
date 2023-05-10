@@ -99,6 +99,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -153,6 +154,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
@@ -764,6 +789,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      grass_tiled_0: 6993767741485162940
+      grass_tiled_1: -1535491490300780111
+      grass_tiled_10: -8089951463463920682
+      grass_tiled_11: 3882791032808804487
+      grass_tiled_12: -8799811600886014544
+      grass_tiled_13: -103424919923499657
+      grass_tiled_14: -2726366324604414486
+      grass_tiled_15: 2076234276740926181
+      grass_tiled_16: 2778955212948879322
+      grass_tiled_17: 8831649495129602440
+      grass_tiled_18: 1851746582638814707
+      grass_tiled_19: -6679025942621075987
+      grass_tiled_2: 6547180001074763156
+      grass_tiled_20: 3037222672616680189
+      grass_tiled_21: 6852458669386237878
+      grass_tiled_22: -926000357434778792
+      grass_tiled_23: -1858755405759021545
+      grass_tiled_24: 7947151937298174823
+      grass_tiled_3: -1275124493947852245
+      grass_tiled_4: -1257389993609766307
+      grass_tiled_5: -3844774462577775674
+      grass_tiled_6: 2872783091976863455
+      grass_tiled_7: 2634335898532115766
+      grass_tiled_8: 3551852757152063585
+      grass_tiled_9: -301429871723318611
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
