@@ -23,10 +23,13 @@ public class PlayerMovement : MonoBehaviour
 
     [Header ("Jump System")]
     [SerializeField] float jumpForce;
-    [SerializeField] float fallMultiplier;
     [SerializeField] float jumpTime;
+    [SerializeField] float fallMultiplier;
     [SerializeField] float jumpMultiplier;
+    bool isJumping;
+    float jumpCounter;
 
+<<<<<<< Updated upstream
     public LayerMask groundLayer;
     public Transform feetPosition;
     public float groundCheckCircle;
@@ -34,6 +37,12 @@ public class PlayerMovement : MonoBehaviour
 
     bool isJumping;
     float jumpCounter;
+=======
+    [Header("Ground Check")]
+    [SerializeField] public LayerMask groundLayer;
+    [SerializeField] public Transform feetPosition;
+    Vector2 vecGravity;
+>>>>>>> Stashed changes
 
     [Header("Ladder System")]
     private float vertical;
@@ -57,32 +66,44 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         playerControls = new PlayerInput();
+        
     }
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
         moveDirection = move.ReadValue<Vector2>();
+=======
+        
+
+        moveDirection = move.ReadValue<Vector2>();
+        animator.SetFloat("speed", Mathf.Abs(moveDirection.x));
+        //flip sprite when Player moves in different direction
+>>>>>>> Stashed changes
 
         //flip sprite when Player moves in different direction
         if (moveDirection.x < 0)
         {
             spriteRenderer.flipX = false;
-            
+
         }
         else if (moveDirection.x > 0)
         {
             spriteRenderer.flipX = true;
         }
- 
         //one way plattform
         if (moveDirection.y < 0)
         {
-            if(currentOneWayPlatform != null)
+            if (currentOneWayPlatform != null)
             {
                 StartCoroutine(DisableCollision());
             }
         }
-        
+        if (playerRb.velocity.y <0)
+        {
+            playerRb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) *Time.deltaTime;
+        } 
+
         if (isLadder && moveDirection.y > 0)
         {
             isClimbing = true;
@@ -94,7 +115,9 @@ public class PlayerMovement : MonoBehaviour
     // runs constantly 50 times/ sec
     void FixedUpdate()
     {
+
         
+
         //freeze player when Dialogue is playing
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
@@ -105,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         if (isClimbing)
         {
             //set gravity for player 0
-            playerRb.gravityScale = 0f;
+            //playerRb.gravityScale = 0f;
             //new speed is x velocity and vertical movement 
             playerRb.velocity = new Vector2(playerRb.velocity.x, moveDirection.y * speed);
         }
@@ -114,10 +137,9 @@ public class PlayerMovement : MonoBehaviour
             // set gravity back to normla
             playerRb.gravityScale = 4f;
         }
-
-        //move player
-        //transform.position += new Vector3(input, 0, 0) * Time.deltaTime * speed;
-        playerRb.velocity = new Vector2(moveDirection.x* speed, playerRb.velocity.y);
+            //move player
+            //transform.position += new Vector3(input, 0, 0) * Time.deltaTime * speed;
+            playerRb.velocity = new Vector2(moveDirection.x* speed, playerRb.velocity.y);
     }
 
     //in so new input system works
@@ -125,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
     {
         move = playerControls.Player.Move;
         move.Enable();
+        move.performed += Move;
 
         jump = playerControls.Player.jump;
         jump.Enable();
@@ -142,6 +165,7 @@ public class PlayerMovement : MonoBehaviour
         fire.Disable();
     }
 
+<<<<<<< Updated upstream
     //ground check
     private bool isGrounded()
     {   // is Player on Ground?
@@ -149,6 +173,8 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(feetPosition.position, groundCheckCircle, groundLayer);
     }
 
+=======
+>>>>>>> Stashed changes
     //check one way plattform 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -191,31 +217,64 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
     }
+    
+    //ground Check
+    bool isGrounded()
+    {
+        return Physics2D.OverlapCapsule(feetPosition.position, new Vector2(0.5f, 0.2f), CapsuleDirection2D.Horizontal, 0, groundLayer);
+    }
+    //inoput actions
+    private void Move(InputAction.CallbackContext context)
+    { 
+        //player does not stop running!
+        /*
+        moveDirection = move.ReadValue<Vector2>();
+        animator.SetFloat("speed", Mathf.Abs(moveDirection.x));
+        //flip sprite when Player moves in different direction
+
+        if (moveDirection.x < 0)
+        {
+            spriteRenderer.flipX = false;
+
+        }
+        else if (moveDirection.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        //one way plattform
+        if (moveDirection.y < 0)
+        {
+            if (currentOneWayPlatform != null)
+            {
+                StartCoroutine(DisableCollision());
+            }
+        }
+
+        if (isLadder && moveDirection.y > 0)
+        {
+            isClimbing = true;
+            Debug.Log("Start Klettern");
+        }*/
+    }
 
     private void Fire(InputAction.CallbackContext context)
     {
         Debug.Log("hit");
     }
 
-    private void Jump(InputAction.CallbackContext context)
+    public void Jump(InputAction.CallbackContext context)
     {
         Debug.Log("jump");
+        // https://www.youtube.com/watch?v=XhwRYNie-aI
         if (isGrounded())
         {
-            playerRb.velocity = new Vector2(moveDirection.x * speed, jumpForce);
-            //playerRb.velocity = new Vector2(playerRb.velocity.x, jumpForce);
+            
+            playerRb.velocity = new Vector2(playerRb.velocity.x, jumpForce);
             isJumping = true;
             jumpCounter = 0;
         }
-
-        //funktioniert nicht
-        //player falls faster the longer he falls
-        if (playerRb.velocity.y < 0)
-        {
-
-            playerRb.velocity -= vecGravity* fallMultiplier * Time.deltaTime;
-        }
-
+        
+        
         //player is jumping
         if (playerRb.velocity.y > 0 && isJumping)
         {
@@ -226,13 +285,15 @@ public class PlayerMovement : MonoBehaviour
             }
             float t = jumpCounter / jumpTime;
             float currentJumpM = jumpMultiplier;
-            //player gets slower the higher he jumps
+            
+           /* //player gets slower the higher he jumps
             if (t > 0.5f)
             {
                 currentJumpM = jumpMultiplier * (1 - t);
+            }*/
+            playerRb.velocity += vecGravity * jumpMultiplier * Time.deltaTime;
+            
             }
-            playerRb.velocity += vecGravity * currentJumpM * Time.deltaTime;
-        }
-       
+        
     }
 }
