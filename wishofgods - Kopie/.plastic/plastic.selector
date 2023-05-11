@@ -1,4 +1,0 @@
-repository "WishOfGods @wishofgods@cloud"
-  path "/"
-    br "/main"
-    co "/main"

@@ -99,7 +99,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -154,30 +153,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
@@ -826,32 +801,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      ground_blue_0: -5106544571615478358
-      ground_blue_1: 1579987073130291939
-      ground_blue_10: -7823223029839767534
-      ground_blue_11: 7742859564093793514
-      ground_blue_12: -2047762966593942732
-      ground_blue_13: -7441116459170518417
-      ground_blue_14: -5557185029773525411
-      ground_blue_15: 5279453666455285514
-      ground_blue_16: -8911696252170131772
-      ground_blue_17: 2452517191645445657
-      ground_blue_18: 6266883308647480967
-      ground_blue_19: -2771383031940084019
-      ground_blue_2: 1738501227432690775
-      ground_blue_20: 1074061084870100473
-      ground_blue_21: -4458081508845526960
-      ground_blue_22: -7598814039495205807
-      ground_blue_23: -538608044084977236
-      ground_blue_24: 8842603212726559892
-      ground_blue_3: -3269343420275678728
-      ground_blue_4: 5782366703838997572
-      ground_blue_5: -8141284084086478029
-      ground_blue_6: -481448603282265840
-      ground_blue_7: -4904221020657237121
-      ground_blue_8: -6364765236186227986
-      ground_blue_9: 6774370120137493685
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

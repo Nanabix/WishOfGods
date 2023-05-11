@@ -99,7 +99,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -154,30 +153,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
@@ -726,32 +701,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      ground_brown_0: 1655404865658883691
-      ground_brown_1: 5337644016079019588
-      ground_brown_10: -943366748110964070
-      ground_brown_11: -2879467971530373722
-      ground_brown_12: 8951003452526596371
-      ground_brown_13: 638489534290139921
-      ground_brown_14: 6050551151099931574
-      ground_brown_15: -6605982167184030093
-      ground_brown_16: 2694811613528944804
-      ground_brown_17: -1637498149603956273
-      ground_brown_18: 8877058113954576763
-      ground_brown_19: 6142710109969318039
-      ground_brown_2: 2506049232422853476
-      ground_brown_20: 3206419113122960791
-      ground_brown_21: 4167862105392087381
-      ground_brown_22: 731477739136890710
-      ground_brown_23: -2242635793823615463
-      ground_brown_24: -7373603897652025759
-      ground_brown_3: 5394415600726888242
-      ground_brown_4: 7077425627458017172
-      ground_brown_5: 1761030990015332772
-      ground_brown_6: 5307152033633787717
-      ground_brown_7: 9043242670446931400
-      ground_brown_8: -1147245541239999241
-      ground_brown_9: 7008258023542386947
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
