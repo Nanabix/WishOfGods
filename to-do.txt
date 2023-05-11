@@ -1,0 +1,7 @@
+- jump
+(no double jump -> ground check in fixed update)
+
+- loading screen
+
+- new ui tool and rebuild menus
+
