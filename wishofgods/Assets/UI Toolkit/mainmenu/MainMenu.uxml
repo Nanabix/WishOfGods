@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="/Assets/UI Toolkit/themes/button_V1.uss" />
+    <ui:VisualElement name="background" style="position: absolute; background-image: url(&apos;/Assets/Sprites/Art/Background/background menü.png&apos;); -unity-background-scale-mode: stretch-to-fill; background-color: rgba(0, 0, 0, 0.27); width: 100%; height: 100%; align-items: center; justify-content: center; flex-grow: 1;">
+        <ui:VisualElement style="align-items: center; justify-content: center; width: 503px; height: 656px; background-color: rgba(255, 255, 255, 0.55); background-image: none; border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px;">
+            <ui:Label text="Main Menu" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 50px; color: rgb(88, 43, 55); -unity-text-align: lower-center; position: absolute; left: auto; top: 10px;" />
+            <ui:Button text="Start Game" display-tooltip-when-elided="true" name="StartGame" class="button_V1" />
+            <ui:Button text="Quit Game" display-tooltip-when-elided="true" name="QuitGame" class="button_V1" />
+            <ui:Label text="test" display-tooltip-when-elided="true" name="test" style="color: rgb(0, 0, 0); -unity-font-style: bold; font-size: 20px; position: absolute; bottom: 20px; display: none; visibility: visible;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

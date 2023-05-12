@@ -35,9 +35,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public Transform feetPosition;
     public float groundCheckCircle;
     Vector2 vecGravity;
-    [SerializeField] private Transform raycastOrigin;
-    private RaycastHit2D Hit2d;
-
+    
+    
     bool isJumping;
     float jumpCounter;
 
@@ -67,20 +66,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GroundCheckMethod();
-        moveDirection = move.ReadValue<Vector2>();
-        animator.SetFloat("speed",Mathf.Abs(moveDirection.x));
-        //flip sprite when Player moves in different direction
-
-        if (moveDirection.x < 0)
-        {
-            spriteRenderer.flipX = false;
-            
-        }
-        else if (moveDirection.x > 0)
-        {
-            spriteRenderer.flipX = true;
-        }
+       
+        
  
         //one way plattform
         if (moveDirection.y < 0)
@@ -102,7 +89,29 @@ public class PlayerMovement : MonoBehaviour
     // runs constantly 50 times/ sec
     void FixedUpdate()
     {
-        
+
+        moveDirection = move.ReadValue<Vector2>();
+        animator.SetFloat("speed", Mathf.Abs(moveDirection.x));
+        //flip sprite when Player moves in different direction
+
+        if (moveDirection.x < 0)
+        {
+            spriteRenderer.flipX = false;
+
+        }
+        else if (moveDirection.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        if (playerRb.velocity.y < 0)
+        {
+            playerRb.velocity -= vecGravity * fallMultiplier * Time.deltaTime;
+        }
+        if(playerRb.velocity.y>0 && isJumping)
+        {
+            playerRb.velocity += vecGravity * jumpMultiplier * Time.deltaTime;
+        }
+
         //freeze player when Dialogue is playing
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
@@ -133,6 +142,8 @@ public class PlayerMovement : MonoBehaviour
     {
         move = playerControls.Player.Move;
         move.Enable();
+        move.performed += Move;
+ 
 
         jump = playerControls.Player.jump;
         jump.Enable();
@@ -154,19 +165,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded()
     {   // is Player on Ground?
         // Create circle -> place cirlce at players feet -> make circle equaö to groundCheckCircle var -> do they overlap?
-        return Physics2D.OverlapCircle(feetPosition.position, groundCheckCircle, groundLayer);
+        return Physics2D.OverlapCapsule(feetPosition.position, new Vector2(0.42f, 0.14f), CapsuleDirection2D.Horizontal, 0, groundLayer); 
     }
 
-    private void GroundCheckMethod()
-    {
-        Hit2d = Physics2D.Raycast(raycastOrigin.position, -Vector2.up, 100f, groundLayer);
-        if(Hit2d != false)
-        {
-            Vector2 temp = feetPosition.position;
-            temp.y = Hit2d.point.y;
-            feetPosition.position = temp;
-        }
-    }
 
     //check one way plattform 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -212,12 +213,29 @@ public class PlayerMovement : MonoBehaviour
     }
      private void Move(InputAction.CallbackContext context)
     {
+        // player doesn't stop when move.canceled
+        /*
+        moveDirection = move.ReadValue<Vector2>();
+        animator.SetFloat("speed", Mathf.Abs(moveDirection.x));
+        //flip sprite when Player moves in different direction
+
+        if (moveDirection.x < 0)
+        {
+            spriteRenderer.flipX = false;
+
+        }
+        else if (moveDirection.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        */
         
     }
 
     private void Fire(InputAction.CallbackContext context)
     {
         Debug.Log("hit");
+
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -231,33 +249,8 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             jumpCounter = 0;
         }
-        /*
-        //funktioniert nicht
-        //player falls faster the longer he falls
-        if (playerRb.velocity.y < 0)
-        {
-            playerRb.velocity -= vecGravity* fallMultiplier * Time.deltaTime;
-        }
-        */
-        //player is jumping
-        if (playerRb.velocity.y > 0 && isJumping)
-        {
-            jumpCounter += Time.deltaTime;
-            if (jumpCounter > jumpTime)
-            {
-                isJumping = false;
-            }
-            float t = jumpCounter / jumpTime;
-            float currentJumpM = jumpMultiplier;
-            
-            //player gets slower the higher he jumps
-            if (t > 0.5f)
-            {
-                currentJumpM = jumpMultiplier * (1 - t);
-            }
-            playerRb.velocity += vecGravity * currentJumpM * Time.deltaTime;
-            
-        } 
+        
+       
        
     }
 }
